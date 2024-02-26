@@ -15,6 +15,13 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   @override
+  void initState() {
+    _emailController.text = "caxaj@hotmail.com";
+    _passwordController.text = "12341234";
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

@@ -6,6 +6,7 @@ import 'package:dashboard_caxaj/page/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,7 +15,7 @@ Future main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 /// The route configuration.
